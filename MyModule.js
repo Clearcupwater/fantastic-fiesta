@@ -8,44 +8,15 @@ var fileType = '.' + extensionfilter;
 
 
 fs.readdir(directory,function (err,files) {
-        if (err) 
-		throw err; 
-		return results(err);
+        if (err){ 
+		return results(err);}
         list = files.filter(function(file){
 
-         return path.extname(file) === '.' + filterStr;
-}
+         return path.extname(file) === fileType;
+	})
 
 	results(null,list);
 });
-});
-
-results(err,data){
+};
 
 
-
-
-
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
